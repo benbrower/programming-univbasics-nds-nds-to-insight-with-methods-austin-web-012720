@@ -9,10 +9,14 @@ def gross_for_director(director_data)
   # p director_data => {:movies=>[{:release_year=>1975, :studio=>"Universal", :title=>"Jaws", :worldwide_gross=>260000000}, ...studio=>"Buena Vista", :title=>"Lincoln", :worldwide_gross=>182207973}], :name=>"Stephen Spielberg"}
 
   gross_total = 0
+  title_index = 0
 
-  gross_total = director_data[:worldwide_gross]
+  while title_index < director_data[:movies].size
+    gross_total += director_data[:movies][title_index][:worldwide_gross]
+    title_index += 1
+  end
 
-  # gross_total
+  gross_total
 end
 
 # Write a method that, given an NDS creates a new Hash
