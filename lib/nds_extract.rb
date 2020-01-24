@@ -9,10 +9,14 @@ def gross_for_director(director_data)
   # p director_data => {:movies=>[{:release_year=>1975, :studio=>"Universal", :title=>"Jaws", :worldwide_gross=>260000000}, ...studio=>"Buena Vista", :title=>"Lincoln", :worldwide_gross=>182207973}], :name=>"Stephen Spielberg"}
 
   gross_total = 0
-  row_index = 0
-  while row_index < director_data.length do
-    puts director_data[row_index]
-    row_index += 1
+  movie_index = 0
+  while movie < director_data.length do
+    title_index = 0
+    while title_index < director_data[movie_index].length do
+      gross_total += director_data[movie_index][worldwide_gross][title_index]
+      title_index += 1
+    end
+      movie_index += 1
   end
 end
 
