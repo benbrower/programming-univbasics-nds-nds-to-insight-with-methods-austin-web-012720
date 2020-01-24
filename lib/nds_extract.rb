@@ -11,7 +11,7 @@ def gross_for_director(director_data)
   gross_total = 0
   row_index = 0
   while row_index < director_data.length do
-    p director_data[row_index]
+    puts director_data[row_index]
     row_index += 1
   end
 end
