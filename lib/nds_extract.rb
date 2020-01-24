@@ -10,7 +10,7 @@ def gross_for_director(director_data)
 
   gross_total = 0
 
-  director_data[:worldwide_gross]
+  director_data[0][:worldwide_gross]
 
   # gross_total
 end
